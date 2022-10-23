@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM2E11542.Views.PageMaps">
+    <ContentPage.Content>
+        
+        
+        <Grid BackgroundColor="DodgerBlue">
+            
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <maps:Map x:Name="mapa" 
+                  Grid.Row="0" 
+                  Grid.Column="0"
+                  IsShowingUser="True"
+                  
+                 
+                  />
+
+            <StackLayout Padding="10,100,10,-70">
+
+                <Button x:Name="btncompartir"
+                           VerticalOptions="EndAndExpand"
+                       
+                            Text="Compartir Imagen de mi Ubicacion"
+                            Background="white"
+                            WidthRequest="400"
+                            HeightRequest="50"
+                            BorderWidth="2"
+                            BorderColor="DarkCyan"
+                            CornerRadius="10"
+                            Clicked="bbtnCompartir_Clicke"
+                            />
+
+            </StackLayout>
+
+
+        </Grid>
+
+      
+
+    </ContentPage.Content>
+</ContentPage>

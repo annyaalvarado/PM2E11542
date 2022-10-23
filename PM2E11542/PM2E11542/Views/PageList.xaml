@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Convertidor="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="PM2E11542.Views.PageList">
+
+    
+
+    <Grid Margin="30,5,30,5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0">
+
+                <ListView x:Name="listaSites" 
+                      ItemTapped="listaSites_ItemTapped">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                            <StackLayout Orientation="Horizontal">
+                                
+                                
+
+                                <Image Source="Imagenfoto.png"
+                                    Grid.Column="0"/>
+
+                                <Label VerticalOptions="Center" Text="{Binding descripcion}"/>
+                                
+                            </StackLayout>
+
+                        </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1">
+
+                <Grid Margin="20,30,30,0">
+                    <Button x:Name="btnEliminar"
+                            Text="Eliminar Sitio"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="0"
+                            Background="white"
+                            BorderWidth="2"
+                            CornerRadius="10"
+                            BorderColor="DarkCyan"
+                            Clicked="btnEliminar_Clicked"                            
+                            />
+                
+                <Button x:Name="btnMirarMapa"
+                            Text="Ver Mapa"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="1"
+                            Background="white"
+                            BorderWidth="2"
+                            BorderColor="DarkCyan"
+                            CornerRadius="10"
+                            Clicked="btnMirarMapa_Clicked"
+                            />
+                </Grid>
+
+            </StackLayout>
+        </Grid>
+
+    
+</ContentPage>
